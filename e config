@@ -1,0 +1,23 @@
+[0;1;32m●[0m docker.service - Docker Application Container Engine
+     Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+     Active: [0;1;32mactive (running)[0m since Sat 2023-06-24 01:07:13 -03; 16h ago
+TriggeredBy: [0;1;32m●[0m docker.socket
+       Docs: https://docs.docker.com
+   Main PID: 1553 (dockerd)
+      Tasks: 32
+     Memory: 1.8G
+     CGroup: /system.slice/docker.service
+             ├─   1553 /usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+             ├─1123861 /usr/bin/docker-proxy -proto tcp -host-ip 0.0.0.0 -host-port 3306 -container-ip 172.18.0.2 -container-port 3306
+             └─1123868 /usr/bin/docker-proxy -proto tcp -host-ip :: -host-port 3306 -container-ip 172.18.0.2 -container-port 3306
+
+jun 24 17:20:38 brendon-dev dockerd[1553]: time="2023-06-24T17:20:38.356171914-03:00" level=info msg="No non-localhost DNS nameservers are left in resolv.conf. Using default external servers: [nameserver 8.8.8.8 nameserver 8.8.4.4]"
+jun 24 17:20:38 brendon-dev dockerd[1553]: time="2023-06-24T17:20:38.356215196-03:00" level=info msg="IPv6 enabled; Adding default IPv6 external servers: [nameserver 2001:4860:4860::8888 nameserver 2001:4860:4860::8844]"
+jun 24 17:22:45 brendon-dev dockerd[1553]: time="2023-06-24T17:22:45.557698982-03:00" level=info msg="ignoring event" container=f5a709f4d848c95ab10eb8860e06d0dd8d2686ebf332ac557f166743d1ad45e6 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+jun 24 17:22:49 brendon-dev dockerd[1553]: time="2023-06-24T17:22:49.935105840-03:00" level=info msg="ignoring event" container=6799de6e09e10520ee5a8b1b1f7e714cfe55fbeafe56c2dacc640da6c99cf50e module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
+jun 24 17:27:51 brendon-dev dockerd[1553]: time="2023-06-24T17:27:51.431480264-03:00" level=warning msg="no trace recorder found, skipping"
+jun 24 17:28:03 brendon-dev dockerd[1553]: time="2023-06-24T17:28:03.095315994-03:00" level=info msg="No non-localhost DNS nameservers are left in resolv.conf. Using default external servers: [nameserver 8.8.8.8 nameserver 8.8.4.4]"
+jun 24 17:28:03 brendon-dev dockerd[1553]: time="2023-06-24T17:28:03.095361154-03:00" level=info msg="IPv6 enabled; Adding default IPv6 external servers: [nameserver 2001:4860:4860::8888 nameserver 2001:4860:4860::8844]"
+jun 24 17:28:10 brendon-dev dockerd[1553]: time="2023-06-24T17:28:10.722766178-03:00" level=info msg="No non-localhost DNS nameservers are left in resolv.conf. Using default external servers: [nameserver 8.8.8.8 nameserver 8.8.4.4]"
+jun 24 17:28:10 brendon-dev dockerd[1553]: time="2023-06-24T17:28:10.722810292-03:00" level=info msg="IPv6 enabled; Adding default IPv6 external servers: [nameserver 2001:4860:4860::8888 nameserver 2001:4860:4860::8844]"
+jun 24 17:28:15 brendon-dev dockerd[1553]: time="2023-06-24T17:28:15.411283862-03:00" level=info msg="ignoring event" container=476ff5976b32992dcc707524eaaf6b39a99d98fdc9fb027e16e9660d734d7ba5 module=libcontainerd namespace=moby topic=/tasks/delete type="*events.TaskDelete"
