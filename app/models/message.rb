@@ -10,7 +10,7 @@ class Message < ApplicationRecord
 
   def broadcast_room_messages_create
     broadcast_append_to(
-      'room_messages_channel',
+      "room_#{ self.room_id }_messages_channel",
       partial: 'messages/message',
       locals: { message: self },
       target: "room_messages_div")
@@ -18,7 +18,7 @@ class Message < ApplicationRecord
 
   def broadcast_room_messages_update
     broadcast_replace_to(
-      'room_messages_channel',
+      "room_#{ self.room_id }_messages_channel",
       partial: 'messages/message',
       locals: { message: self },
       target: "messages_#{ id }")
@@ -26,7 +26,7 @@ class Message < ApplicationRecord
 
   def broadcast_room_messages_destroy
     broadcast_remove_to(
-      'room_messages_channel',
+      "room_#{ self.room_id }_messages_channel",
       target: "messages_#{ id }")
   end
 end
